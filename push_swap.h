@@ -13,11 +13,17 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-typedef struct s_stack
+typedef struct s_node
 {
-	struct s_stack	*prev;
-	struct s_stack	*next;
+	struct s_node	*prev;
+	struct s_node	*next;
 	int				data;
-}	t_stack;
+}	t_node;
+
+typedef struct s_stck
+{
+	t_node	*head;
+	t_node	*last;
+}	t_stck;
 
 #endif
