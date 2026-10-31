@@ -13,6 +13,8 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <stdlib.h>
+
 typedef struct s_node
 {
 	struct s_node	*prev;
