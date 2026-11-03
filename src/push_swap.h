@@ -28,4 +28,8 @@ typedef struct s_stck
 	t_node	*last;
 }	t_stck;
 
+void    sa(t_stck *stackA);
+void    sb(t_stck *stackB);
+void    ss(t_stck *stackA,t_stck *stackB);
+
 #endif
