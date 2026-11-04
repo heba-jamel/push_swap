@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-static void	swap(t_node *head)
+void	swap(t_node *head)
 {
+<<<<<<< HEAD
 	int	temp;
 
 	temp = head->data;
@@ -21,6 +22,16 @@ static void	swap(t_node *head)
 }
 
 void	sa(t_stack *stackA)
+=======
+    int		temp;
+
+    temp = head->data;
+    head->data = head ->next->data;
+    head->next->data = temp;
+}
+
+void    sa(t_stack *stackA)
+>>>>>>> e200bfe (loai)
 {
 	if (!stackA || !stackA->head || !stackA->head->next)
 		return ;
@@ -28,6 +39,7 @@ void	sa(t_stack *stackA)
 	write(1, "sa\n", 3);
 }
 
+<<<<<<< HEAD
 void	sb(t_stack *stackB)
 {
 	if (!stackB || !stackB->head || !stackB->head->next)
@@ -41,4 +53,18 @@ void	ss(t_stack *stackA, t_stack *stackB)
 	sa(stackA);
 	sb(stackB);
 	write(1, "ss\n", 3);
+=======
+void    sb(t_stack *stackB)
+{
+    if (!stackB || !(stackB->head) || !(stackB->head->next))
+    return ;
+
+    swap(stackB->head);
+}
+
+void    ss(t_stack *stackA,t_stack *stackB)
+{
+    sa(stackA);
+    sb(stackB);
+>>>>>>> e200bfe (loai)
 }

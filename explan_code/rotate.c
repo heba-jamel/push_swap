@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	rotate(t_stck *stack)
+void	rotate(t_stack *stack)
 {
 	t_node	*tmp;
 
@@ -85,7 +85,7 @@ void	rotate(t_stck *stack)
 	stack->last = tmp;
 }
 
-void	ra(t_stck *a)
+void	ra(t_stack *a)
 {
 	// STEP 1:
 	// Receive a pointer to Stack A.
@@ -97,7 +97,7 @@ void	ra(t_stck *a)
 	rotate(a);
 }
 
-void	rb(t_stck *b)
+void	rb(t_stack *b)
 {
 	// STEP 1:
 	// Receive a pointer to Stack B.
@@ -108,7 +108,7 @@ void	rb(t_stck *b)
 	rotate(b);
 }
 
-void	rr(t_stck *a, t_stck *b)
+void	rr(t_stack *a, t_stack *b)
 {
 	// STEP 1:
 	// Receive pointers to Stack A and Stack B.

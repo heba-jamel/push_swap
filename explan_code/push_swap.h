@@ -26,6 +26,6 @@ typedef struct s_stck
 {
 	t_node	*head;
 	t_node	*last;
-}	t_stck;
+}	t_stack;
 
 #endif

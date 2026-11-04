@@ -43,4 +43,6 @@ void	pb(t_stack *a, t_stack *b)
 {
 	push(a, b);
 	write(1, "pb\n", 3);
+
+    push(a, b);
 }

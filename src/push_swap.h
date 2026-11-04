@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_node
 {
@@ -26,10 +27,17 @@ typedef struct s_stck
 {
 	t_node	*head;
 	t_node	*last;
-}	t_stck;
+}	t_stack;
 
-void    sa(t_stck *stackA);
-void    sb(t_stck *stackB);
-void    ss(t_stck *stackA,t_stck *stackB);
-
+void    sa(t_stack *stackA);
+void    sb(t_stack *stackB);
+void    ss(t_stack *stackA,t_stack *stackB);
+void	pa(t_stack *a, t_stack *b);
+void	pb(t_stack *a, t_stack *b);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
 #endif
