@@ -6,12 +6,13 @@
 /*   By: halomari <halomari@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 18:36:01 by halomari          #+#    #+#             */
-/*   Updated: 2026/11/04 19:56:33 by halomari         ###   ########.fr       */
+/*   Updated: 2026/11/04 20:23:24 by halomari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "push_swap.h"
 
-void	swap(t_node *head)
+static void	swap(t_node *head)
 {
 	int	temp;
 
@@ -22,11 +23,10 @@ void	swap(t_node *head)
 
 void	sa(t_stack *stackA)
 {
-    int		temp;
-
-    temp = head->data;
-    head->data = head ->next->data;
-    head->next->data = temp;
+	if (!stackA || !stackA->head || !stackA->head->next)
+		return ;
+	swap(stackA->head);
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_stack *stackB)
