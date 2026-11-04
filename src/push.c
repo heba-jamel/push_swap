@@ -6,7 +6,7 @@
 /*   By: halomari <halomari@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/04 19:10:12 by halomari          #+#    #+#             */
-/*   Updated: 2026/11/04 19:10:18 by halomari         ###   ########.fr       */
+/*   Updated: 2026/11/04 19:45:14 by halomari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,4 @@ void	pb(t_stack *a, t_stack *b)
 {
 	push(a, b);
 	write(1, "pb\n", 3);
-
-    push(a, b);
 }
