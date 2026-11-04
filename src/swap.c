@@ -22,11 +22,7 @@ void	swap(t_node *head)
 
 void	sa(t_stack *stackA)
 {
-    int		temp;
 
-    temp = head->data;
-    head->data = head ->next->data;
-    head->next->data = temp;
 }
 
 void	sb(t_stack *stackB)
