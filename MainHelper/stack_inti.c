@@ -6,7 +6,7 @@
 /*   By: halomari <halomari@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/05 11:21:48 by halomari          #+#    #+#             */
-/*   Updated: 2026/11/05 13:32:50 by halomari         ###   ########.fr       */
+/*   Updated: 2026/11/05 16:12:33 by halomari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,46 @@ void    push_node(t_stack *stack, t_node *node)
 	stack->head->prev = NULL;
 }
 
-t_node  *pop_node(t_stack *stack)
+t_stack *stack_init(int *numbers, int size)
 {
-    t_node  *temp;
+	t_stack	*stack;
+	t_node	*add;
+	int 	i;
+	int	j;
 
-    if (!stack || !stack->head)
-        return (NULL);
-    temp = stack->head;
-    stack->head = temp->next;
-    if (stack->head)
-        stack->head->prev = NULL;
-    else
-        stack->last = NULL;
-    temp->prev = NULL;
-    temp->next = NULL;
-    return (temp);
+	stack = malloc(sizeof(t_stack));
+	if (!stack)
+		return (NULL);
+	stack->head = NULL;
+	stack->last = NULL;
+	j = size -1;
+	i = 0;
+	while (i < size)
+	{
+		add = new_node(numbers[j]);
+		if (!add)
+		{
+			free_stack(stack);
+			return (NULL);
+		}
+		push_node(stack, add);
+		i++;
+		j--;
+	}
+	return (stack);
 }
 
-t
+void	free_stack(t_stack *stack)
+{
+	t_node	*temp;
+
+	if (!stack)
+		return ;
+	while(stack->head)
+	{
+		temp = stack->head;
+		stack->head = temp->next;
+		free(temp);
+	}
+	free(stack);
+}
