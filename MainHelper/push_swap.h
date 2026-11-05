@@ -6,7 +6,7 @@
 /*   By: halomari <halomari@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 16:00:06 by halomari          #+#    #+#             */
-/*   Updated: 2026/10/29 16:42:37 by halomari         ###   ########.fr       */
+/*   Updated: 2026/11/04 19:43:02 by halomari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_node
 {
@@ -28,4 +29,15 @@ typedef struct s_stck
 	t_node	*last;
 }	t_stack;
 
+void    sa(t_stack *stackA);
+void    sb(t_stack *stackB);
+void    ss(t_stack *stackA,t_stack *stackB);
+void	pa(t_stack *a, t_stack *b);
+void	pb(t_stack *a, t_stack *b);
+void	ra(t_stack *a);
+void	rb(t_stack *b);
+void	rr(t_stack *a, t_stack *b);
+void	rra(t_stack *a);
+void	rrb(t_stack *b);
+void	rrr(t_stack *a, t_stack *b);
 #endif
