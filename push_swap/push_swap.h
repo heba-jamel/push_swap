@@ -15,7 +15,19 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+<<<<<<< HEAD:src/push_swap.h
 # include <limts.h>
+=======
+# include <limits.h>
+
+typedef enum e_strategy
+{
+	ADAPTIVE,
+	SIMPLE,
+	MEDIUM,
+	COMPLEX
+}	t_strategy;
+>>>>>>> loai-work:push_swap/push_swap.h
 
 typedef struct s_node
 {
@@ -28,17 +40,25 @@ typedef struct s_stck
 {
 	t_node	*head;
 	t_node	*last;
+	int		size;
+
 }	t_stack;
 
-void    sa(t_stack *stackA);
-void    sb(t_stack *stackB);
-void    ss(t_stack *stackA,t_stack *stackB);
-void	pa(t_stack *a, t_stack *b);
-void	pb(t_stack *a, t_stack *b);
-void	ra(t_stack *a);
-void	rb(t_stack *b);
-void	rr(t_stack *a, t_stack *b);
-void	rra(t_stack *a);
-void	rrb(t_stack *b);
-void	rrr(t_stack *a, t_stack *b);
+typedef struct s_config
+{
+	t_strategy	strategy;
+	int			bench;
+	int			numbers_start;
+}	t_config;
+
+t_node	*create_node(int data);
+t_stack	*create_stack(void);
+void	push(t_stack *stack, t_node *node);
+t_node	*pop(t_stack *stack);
+void	free_stack(t_stack *stack);
+char	**ft_split(char const *s, char c);
+int		parse_argument(char *arg, t_stack *stack);
+int		add_number(t_stack *stack, char *str);
+t_stack	*parsing(int argc, char **argv);
+
 #endif
