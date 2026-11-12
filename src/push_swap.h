@@ -6,7 +6,7 @@
 /*   By: halomari <halomari@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/29 16:00:06 by halomari          #+#    #+#             */
-/*   Updated: 2026/11/04 19:43:02 by halomari         ###   ########.fr       */
+/*   Updated: 2026/11/05 19:15:23 by halomari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <limts.h>
 
 typedef struct s_node
 {
