@@ -6,7 +6,7 @@
 /*   By: labu-mus <labu-mus@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 18:42:00 by labu-mus          #+#    #+#             */
-/*   Updated: 2026/11/10 18:42:03 by labu-mus         ###   ########.fr       */
+/*   Updated: 2026/11/21 18:24:25 by halomari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static int	empty_input(char *str)
 	i = 0;
 	if (!str)
 		return (0);
-	while (str[i] == ' ')  // "" "      "
+	while (str[i] == ' ')
 		i++;
 	if (str[i] == '\0')
 		return (1);
